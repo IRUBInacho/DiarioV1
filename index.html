@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Diario Digital</title>
+    <link rel="stylesheet" href="estiloindex.css">
+
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -58,9 +60,11 @@
         }
     </style>
 </head>
+
 <body>
     <a href="https://www.elfaro333.com">Visita nuestro sitio web</a>
     <header>El Faro</header>
+
     <nav>
         <li><a href="#Inicio">Inicio</a></li>
         <li><a href="#Deporte">Deporte</a></li>
@@ -96,47 +100,207 @@
         <video width="640" height="360" controls>
             <source src="video1.mp4" type="video/mp4">
             Tu navegador no soporta la etiqueta de video.
+        
+            <style> 
+
+                video {
+                    margin-top: 40px; /* Baja el texto 50px */
+                    width: 640px;
+                    height: 360px;
+                    border-radius: 15px;
+                    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+                    transition: transform 0.3s ease;
+                    margin-left: 700px;
+                
+
+                }
+
+                video:hover {
+                    transform: scale(1.05);
+                }
+              
+            </style>
           </video>
 
 
           <audio controls>
+            <p>AUDIO VIRAL 2025</p>
             <source src="audio1.mp3" type="audio/mpeg">
             Tu navegador no soporta la etiqueta de audio.
+                <style>
+
+                    audio {
+
+                        margin-top: -440px; /* Baja el texto 50px */
+                    }
+
+                </style>
+                        
           </audio>
-        
-    </div>
+
+          
+
+          <style>
+ 
+            section#Deporte {
+                margin-top:40px; /* Baja el texto 50px */
+                background-color: #ffffff;
+                padding: 20px;
+                border-radius: 8px;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            }
+            section#Deporte h2 {
+                color: #2c3e50;
+                font-size: 28px;
+                margin-bottom: 10px;
+            }
+            section#Deporte p {
+                color: #34495e;
+                font-size: 16px;
+                margin-bottom: 20px;
+            }
+            .news-table {
+                width: 100%;
+                border-collapse: separate;
+                border-spacing: 0 15px;
+            }
+            .news-table th, .news-table td {
+                padding: 15px;
+                text-align: left;
+                vertical-align: top;
+            }
+            .news-table th {
+                background-color: #2c3e50;
+                color: white;
+                border-radius: 8px 8px 0 0;
+            }
+            .news-table tr {
+                background-color: #f8f9fa;
+                border-radius: 8px;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                display: flex;
+                align-items: center;
+                padding: 15px;
+            }
+            .news-table img {
+                width: 400px;
+                height: auto;
+                border-radius: 10px;
+                margin-right: 15px;
+            }
+            .news-table a {
+                color: #3498db;
+                text-decoration: none;
+            }
+            .news-table a:hover {
+                text-decoration: underline;
+            }
+            .news-content {
+                display: flex;
+                flex-direction: column;
+            }
+        </style>
 
 
 
-    <div class="container">
+        <div class="container">
         <section id="Deporte">
-            <h2>Sección de Deportes</h2>
+            <h2>Sección de Deporte</h2>
             <p>Aquí encontrarás las últimas noticias deportivas...</p>
-            <table>
+            <table class="news-table">
+           
                 <tr>
-                    <th>Título</th>
-                    <th>Resumen</th>
-                    <th>Enlace</th>
+                    <td><img src="logo5.png" alt="Partido Increíble"></td>
+                    <td class="news-content">
+                        <strong>Messi y una decisión clave de cara al Mundial 2026</strong> 
+                        <span>Lionel Messi ha anunciado que jugará en el Mundial 2026, lo que ha emocionado a sus seguidores y promete ser un gran espectáculo para los amantes del fútbol. Su participación es vista como una oportunidad para que Argentina defienda su título y para que Messi continúe demostrando su talento en el escenario más grande del deporte.</span>
+                        <a href="#">Leer más</a>
+                    </td>
                 </tr>
                 <tr>
-                    <td>Partido Increíble</td>
-                    <td>El equipo local gana en un emocionante final.</td>
-                    <td><a href="#">Leer más</a></td>
+                    <td><img src="logo6.png" alt="Jugador Estrella"></td>
+                    <td class="news-content">
+                        <strong>España, campeona de los Juegos Sordolímpicos</strong>
+                        <span>El equipo femenino de fútbol sala de España se coronó campeón en los Juegos Sordolímpicos, demostrando su habilidad y determinación. Este triunfo es un gran orgullo para el país y destaca la importancia de la inclusión en el deporte</span>
+                        <a href="#">Leer más</a>
+                    </td>
                 </tr>
                 <tr>
-                    <td>Jugador Estrella</td>
-                    <td>Un jugador rompe récords en la última jornada.</td>
-                    <td><a href="#">Leer más</a></td>
-                </tr>
-                <tr>
-                    <td>Nueva Contratación</td>
-                    <td>El equipo anuncia una sorprendente contratación.</td>
-                    <td><a href="#">Leer más</a></td>
+                    <td><img src="logo7.png" alt="Nueva Contratación"></td>
+                    <td class="news-content">
+                        <strong>Djokovic hace historia en Masters 1000</strong>
+                        <span>Novak Djokovic ha alcanzado un nuevo récord en los torneos Masters 1000, consolidándose como uno de los mejores tenistas de todos los tiempos. Su perseverancia y talento continúan inspirando a jugadores y aficionados alrededor del mundo.</span>
+                        <a href="#">Leer más</a>
+                    </td>
                 </tr>
             </table>
         </section>
     </div>
+        
 
+
+
+    <style>
+ 
+        section#Negocio {
+
+            margin-top:40px; /* Baja el texto 50px */
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        section#Negocio h2 {
+            color: #2c3e50;
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+        section#Negocio p {
+            color: #34495e;
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+        .news-table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0 15px;
+        }
+        .news-table th, .news-table td {
+            padding: 15px;
+            text-align: left;
+            vertical-align: top;
+        }
+        .news-table th {
+            background-color: #2c3e50;
+            color: white;
+            border-radius: 8px 8px 0 0;
+        }
+        .news-table tr {
+            background-color: #f8f9fa;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: center;
+            padding: 15px;
+        }
+        .news-table img {
+            width: 200px;
+            height: auto;
+            border-radius: 10px;
+            margin-right: 15px;
+        }
+        .news-table a {
+            color: #3498db;
+            text-decoration: none;
+        }
+        .news-table a:hover {
+            text-decoration: underline;
+        }
+        .news-content {
+            display: flex;
+            flex-direction: column;
+        }
+    </style>
 
 
 
@@ -144,28 +308,36 @@
         <section id="Negocio">
             <h2>Negocios</h2>
             <p>Lo más importante y relevante de los negocios a nivel nacional e internacional</p>
-            <table>
+            <table class="news-table">
+        
                 <tr>
-                    <th>Título</th>
-                    <th>Resumen</th>
-                    <th>Enlace</th>
+                    <td><img src="logo8.png" alt="Partido Increíble"></td>
+                    <td class="news-content">
+                        <strong>Mercados argentinos atentos a detalles del acuerdo con el FMI Reuters</strong>
+                        <span>Los mercados financieros en Argentina operan con cautela mientras esperan información sobre las negociaciones del gobierno con el FMI para un crédito de 20.000 millones de dólares. El objetivo es reducir la incertidumbre y fortalecer las reservas del banco central. ​
+                            Reuters</span>
+                        <a href="#">Leer más</a>
+                    </td>
                 </tr>
                 <tr>
-                    <td>Partido Increíble</td>
-                    <td>El equipo local gana en un emocionante final.</td>
-                    <td><a href="#">Leer más</a></td>
+                    <td><img src="logo9.png" alt="Jugador Estrella"></td>
+                    <td class="news-content">
+                        <strong>Epa Colombia: continuidad de negocios tras condena judicial.
+                            </strong>
+                        <span>Daneidy Barrera Rojas, conocida como Epa Colombia, enfrenta una condena de más de 5 años de prisión por vandalismo. Su pareja, Karol Samantha, asegura que los negocios de Epa Colombia, incluyendo su marca de keratinas y peluquerías, seguirán operando bajo su gestión durante su ausencia. </span>
+                        <a href="#">Leer más</a>
+                    </td>
                 </tr>
                 <tr>
-                    <td>Jugador Estrella</td>
-                    <td>Un jugador rompe récords en la última jornada.</td>
-                    <td><a href="#">Leer más</a></td>
-                </tr>
-                <tr>
-                    <td>Nueva Contratación</td>
-                    <td>El equipo anuncia una sorprendente contratación.</td>
-                    <td><a href="#">Leer más</a></td>
+                    <td><img src="logo10.png" alt="Nueva Contratación"></td>
+                    <td class="news-content">
+                        <strong>Unión Europea lanza medidas para apoyar al sector vinícola </strong>
+                        <span>La Unión Europea ha implementado un paquete de medidas destinadas a respaldar al sector vinícola, considerado una pieza clave del comercio europeo por su contribución al empleo y a las exportaciones. Estas acciones buscan fortalecer la competitividad y sostenibilidad del sector. </span>
+                        <a href="#">Leer más</a>
+                    </td>
                 </tr>
             </table>
+           
         </section>
     </div>
 
