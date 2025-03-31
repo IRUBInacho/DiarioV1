@@ -1,0 +1,10 @@
+h1 {
+
+    background: #1f6291;
+    font-family: 'calibri';
+    padding: 10px;
+    text-align: center; /* Centra solo el texto */
+    color: rgb(255, 255, 255);
+    font-size: 30px;
+  }
+
