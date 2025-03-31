@@ -96,3 +96,25 @@ p {
     background: #0056b3;
 }
 
+
+.video-container h3 {
+    margin-left: 405px;
+    margin-right: 0;
+    font-size: 22px;
+    background-color: #c8e7ff;
+    padding: 20px 10px; /* Ajusta el padding para aumentar la altura del fondo */
+    text-align: center; /* Centra el texto horizontalmente */
+}
+
+
+.audio-container h4 {
+    margin-left: 405px;
+    margin-right: 0;
+    font-size: 22px;
+    background-color: #c8e7ff;
+    padding: 20px 10px; /* Ajusta el padding para aumentar la altura del fondo */
+    text-align: center; /* Centra el texto horizontalmente */
+   
+    
+}
+
