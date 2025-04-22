@@ -1,155 +1,263 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Diario Digital</title>
-    <link rel="stylesheet" href="css/estiloindex.css">
+    <link rel="stylesheet" href="estiloindex.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <title>Bootstrap demo</title>
+
+
 
 
     <style>
+
+
+
+
         body {
-            font-family: Arial, sans-serif;
+            font-family: Poppins, sans-serif;
             margin: 0;
             padding: 0;
+            color: #131313;
+            background-color: #f9f5f5;
+            width: 100%;
         }
-
         header {
-            background-color: #2c3e50;
-            color: white;
+            background-color: #585898;
+            color: rgb(255, 255, 255);
             padding: 20px;
             text-align: center;
             font-size: 24px;
             font-weight: bold;
+            width: 100%;
         }
-
         nav {
             display: flex;
             justify-content: center;
-            background-color: #34495e;
+            background-color: #c2c2c2;
             padding: 10px;
         }
-
         nav a {
-            color: white;
+            color: rgb(0, 0, 0);
             text-decoration: none;
             padding: 10px 20px;
         }
-
         .container {
             width: 80%;
             margin: auto;
             padding: 20px;
         }
-
         .news {
             display: flex;
             flex-wrap: wrap;
             gap: 20px;
         }
-
         .news-item {
-            background-color: #ecf0f1;
+            background-color: #355057;
             padding: 15px;
             width: calc(33% - 20px);
             border-radius: 8px;
         }
-
         .news-item img {
             width: 100%;
             border-radius: 5px;
         }
-
+        
         footer {
-            background-color: #2c3e50;
-            color: white;
-            text-align: center;
-            padding: 10px;
-            margin-top: 20px;
+        background-color: #4d3838;
+        color: white;
+        text-align: center;
+        padding: 50px; /* Aumenta el relleno */
+        margin-top: 50px;
+        height: 300px; /* Establece una altura específica */
+        width: 100%;
         }
+
+
     </style>
 </head>
 
-<body>
-    <a href="https://www.elfaro333.com">Visita nuestro sitio web</a>
-    <header>
-        <div class="header-top">
-            <div class="titulo-logo">
-                <span class="titulo">El Faro</span>
-                <img src="logo11.png" alt="">
-            </div>
-            <div class="reloj-container">
-                <h1 id="hora">00:00:00</h1>
-                <p id="fecha">dd de mes de yyyy</p>
-            </div>
-        </div>
-    </header>
+ 
 
+
+<body>
+
+    <div class="container">
+        <section id="Publicidad">
+            <div class="publicidad-item">
+                <div class="publicidad-row">
+                    <div class="publicidad-cell"><img src="imagenes/publicidad.png" alt="Publicidad" style="width: 80%;"></div>
+                    <div class="publicidad-cell">¡Aprovecha nuestras ofertas exclusivas!</div>
+                    <div class="publicidad-cell">  <a href="#" class="btn btn-primary">Ver ofertas</a></div>
+                </div>
+            </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+
+
+    <header>
+        El Faro
+        <img src="imagenes/logo11.png" alt="">
+    
+    <div class="header-top">
+         <div class="reloj-container">
+            <p style="margin-bottom: 0;" id="hora">00:00:00</p>
+            <p style="margin-top: 0;" id="fecha">dd de mes de yyyy</p>
+        </div>
+    </div>
+    
+        </div>
+
+    </header>
 
 
     <style>
         header {
             font-size: 50px;
-            background: #1f6291;
+            background: #30393f;
 
         }
 
         img {
             width: 80px;
+         
+        } 
 
-        }
+
+  
+
     </style>
 
-    <nav>
+    <!-- <nav>
         <li><a href="#Inicio">Inicio</a></li>
         <li><a href="#Deporte">Deporte</a></li>
         <li><a href="#Negocio">Negocio</a></li>
         <li><a href="#SobreNosotros">Sobre Nosotros</a></li>
         <li><a href="#Contacto">Contacto</a></li>
-    </nav>
+        <li><a href="#ArticulosRecientes">Articulos Recientes</a></li>
+    </nav> -->
+
+
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">El Faro</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#Inicio">Inicio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="#Deporte">Deporte</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Más
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#Negocio">Negocio</a></li>
+                  <li><a class="dropdown-item" href="#SobreNosotros">Sobre Nosotros</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#Contacto">Contacto</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" aria-disabled="true" href="#ArticulosRecientes">Articulos recientes</a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Buscar
+
+              </button>
+            </form>
+          </div>
+        </div>
+      </nav>
 
 
 
     <div class="container">
-        <section id="Inicio">
-            <h1>INICIO</h1>
-            <p>ULTIMAS NOTICIAS</p>
-            <p id="contador-inicio" class="contador-articulos"></p>
+        <section id="ArticulosRecientes">
+            <h2>Te podría interesar
 
-            <table class="news-table" border="0" cellspacing="10" cellpadding="10">
-
-                <tr>
-
-                    <td><img src="logo2.png" alt=""></td>
-                    <td>Categoria:Nacional</td>
-                    <td>Cortes de luz en la región Metropolitana: Más de 88 mil clientes están sin suministro</td>
-                    <td>Este domingo se registra en la capital del país un sistema frontal con isoterma cero alta por la
-                        que se espera la caída de hasta 30 milímetros de agua en zonas precordilleranas y cordilleranas.
-                    </td>
-                    <td><a href="#">Leer más</a></td>
-                </tr>
-                <tr>
-
-                    <td><img src="logo3.png" alt=""></td>
-                    <td>Categoria: Emergencia</td>
-                    <td>SHOA descarta tsunami en Chile tras temblor 7,0 en Tonga</td>
-                    <td>El Servicio Nacional de Prevención y Respuesta ante Desastres (Senapred) descartó la ocurrencia
-                        de un tsunami en las costas chilenas tras el temblor que afectó a Tonga este domingo.</td>
-                    <td><a href="#">Leer más</a></td>
-                </tr>
-                <tr>
-
-                    <td><img src="logo4.png" alt=""></td>
-                    <td>Categoria: Futbol</td>
-                    <td>De los mejores pagados del plantel: el millonario sueldo que gana Felipe Loyola en Independiente
-                    </td>
-                    <td>El seleccionado chileno la está rompiendo en el fútbol argentino, siendo una de las principales
-                        figuras del torneo. Felipe Loyola anotó un doblete este fin de semana.</td>
-                    <td><a href="#">Leer más</a></td>
-                </tr>
-            </table>
+            </h2>
+            <div class="articulos-container">
+                <div class="articulo-destacado">
+                    <img src="imagenes/articulo1.jpg" alt="Artículo 1">
+                    <h3 style="font-size: larger;">Smart Viajes Económicos</h3>
+                    <p>Descubre ofertas increíbles para viajar al extranjero. ¡Aprovecha ahora!</p>
+                    <a href="https://www.despegar.cl/paquetes/?adjust_adgroup=156155961807&adjust_campaign=20462830261&adjust_t=ovd1mo_r45y7l_v9v5li&adjust_creative=670023652475&adjust_tracker_limit=1000000000&gad_source=1&gbraid=0AAAAADy0RUC-cRmtZpun3oUxHPsfNCprJ&gclid=Cj0KCQjw_JzABhC2ARIsAPe3ynp9Xlcey9m5-_9c2MjuR145CMqQTLR-ys_Y_gC9p9QCfG4Wlk3-tGUaAoLnEALw_wcB&mktdata=accountid%3D8314635954%26pr%3DX%26cc%3DCL%26adjust_t%3Dovd1mo_r45y7l_v9v5li%26kw%3Dviajes%2520baratos%26c%3D670023652475%26mt%3Db%26n%3Dg%26p%3D%26ap%3D%26d%3Dc%26dm%3D%26targetid%3Dkwd-22922106%26campaignid%3D20462830261%26adgroupid%3D156155961807%26ExperimentId%3D%26locationid%3D9198254%26adjust_adgroup%3D156155961807%26adjust_campaign%3D20462830261%26adjust_creative%3D670023652475%26key%3DUT81AK9JAFEGJ4D69OVO6J673E%26adjust_tracker_limit%3D1000000000%26gclid%3DCj0KCQjw_JzABhC2ARIsAPe3ynp9Xlcey9m5-_9c2MjuR145CMqQTLR-ys_Y_gC9p9QCfG4Wlk3-tGUaAoLnEALw_wcB%26id%3D20250422224945132649613255053523%26trackeame_user_id%3D12AC2E8082191744056296162d65853c9-0953-41f2-9292-e35fab14fdac37430435" class="btn btn-primary">Leer más</a>
+                </div>
+                <div class="articulo-destacado">
+                    <img src="imagenes/articulo2.jpg" alt="Artículo 2">
+                    <h3 style="font-size: larger;">Lluvia en Venezuela</h3>
+                    <p>Fuertes lluvias impactan Venezuela y provocan complicaciones en eventos deportivos.</p>
+                    <a href="https://www.t13.cl/noticia/deportes13/partido-postergado-duelo-entre-carabobo-chile-sufrio-retraso-por-fuerte-lluvia-22-4-2025" class="btn btn-primary">Leer más</a>
+                </div>
+                <div class="articulo-destacado">
+                    <img src="imagenes/articulo3.jpg" alt="Artículo 3" style="width: 20%;">
+                    <h3 style="font-size: larger;">Unicornios: Mito o Realidad?</h3>
+                    <p>Hace poco en Paine se vio un unicornio, Lucas Diaz dice haberlo domesticado!</p>
+                    <a href="https://www.elciudadano.com/arte-cultura/un-manuscrito-antiquisimo-y-la-existencia-de-los-unicornios/12/25/" class="btn btn-primary">Leer más</a>
+                </div>
+            </div>
+        </section>
     </div>
+    <hr>
+    
+
+    <h1>INICIO</h1>
+    <p style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size: 30px; color: #734b4b;" >DESTACADOS</p>
+    
+    
+    <div class="container">
+        <section id="Inicio">
+
+        <table class="news-table">
+ 
+
+            <tr>
+                
+                <td><img src="imagenes/logo2.png" alt=""></td>
+                <td>Categoria:Nacional</td>
+                <td>Cortes de luz en la región Metropolitana: Más de 88 mil clientes están sin suministro</td>
+                <td>Este domingo se registra en la capital del país un sistema frontal con isoterma cero alta por la que se espera la caída de hasta 30 milímetros de agua en zonas precordilleranas y cordilleranas.</td>
+                <td><a href="#">Leer más</a></td>
+            </tr>
+
+       
+
+            <tr>
+            
+                <td><img src="imagenes/logo3.png" alt=""></td>
+                <td>Categoria: Emergencia</td>
+                <td>SHOA descarta tsunami en Chile tras temblor 7,0 en Tonga</td>
+                <td>El Servicio Nacional de Prevención y Respuesta ante Desastres (Senapred) descartó la ocurrencia de un tsunami en las costas chilenas tras el temblor que afectó a Tonga este domingo.</td>
+                <td><a href="#">Leer más</a></td>
+            </tr>
+
+           
+
+            <tr>
+               
+                <td><img src="imagenes/logo4.png" alt=""></td>
+                <td>Categoria: Futbol</td>
+                <td>De los mejores pagados del plantel: el millonario sueldo que gana Felipe Loyola en Independiente</td>
+                <td>El seleccionado chileno la está rompiendo en el fútbol argentino, siendo una de las principales figuras del torneo. Felipe Loyola anotó un doblete este fin de semana.</td>
+                <td><a href="#">Leer más</a></td>
+            </tr>
+        </table>
+    </div>
+    
+
+ 
+    <hr>
 
     <div class="container">
         <section id="AgregarArticulo">
@@ -157,26 +265,16 @@
             <form id="form-articulo">
                 <input type="text" id="titulo" placeholder="Título del artículo" required><br><br>
                 <textarea id="descripcion" placeholder="Descripción del artículo" rows="4" required></textarea><br><br>
-
-                <label for="seccion">Selecciona la sección:</label><br>
-                <select id="seccion" required>
-                    <option value="Inicio">Inicio</option>
-                    <option value="Deporte">Deporte</option>
-                    <option value="Negocio">Negocio</option>
-                </select><br><br>
-
                 <button type="submit">Agregar Artículo</button>
             </form>
-
             <div id="articulos-generados">
                 <h3>Artículos agregados:</h3>
                 <ul id="lista-articulos"></ul>
             </div>
         </section>
-
     </div>
 
-
+    <hr>
 
 
     <div class="video-container">
@@ -185,225 +283,203 @@
 
             <source src="video1.mp4" type="video/mp4">
             Tu navegador no soporta la etiqueta de video.
+        
+            <style> 
 
-            <style>
                 video {
-                    margin-top: 40px;
-                    /* Baja el texto 50px */
+                    margin-top: 40px; /* Baja el texto 50px */
                     width: 640px;
                     height: 360px;
                     border-radius: 15px;
                     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
                     transition: transform 0.3s ease;
                     margin-left: 400px;
-
+                
 
                 }
 
                 video:hover {
                     transform: scale(1.05);
                 }
+              
             </style>
-        </video>
+          </video>
 
     </div>
 
 
 
-    <div class="audio-container">
+    <div class="audio-container" style="padding-top: 30px"> 
         <h4> ACTUALIDAD POLITICA: BORIC Y LA REFORMA DE PENSIONES - audio </h4>
-        <audio controls>
+          <audio controls>
             <source src="audio1.mp3" type="audio/mpeg">
             Tu navegador no soporta la etiqueta de audio.
             <style>
                 audio {
                     position: relative;
-                    top: 0px;
-                    /* Ajusta este valor según sea necesario */
-                    margin-left: 400px;
+                    top: 0px; /* Ajusta este valor según sea necesario */
+                    margin-left: 0px;
                     padding: 5px;
-
+                    width: 75%;
+                    padding-left: 350px; 
+                    /* margin-top: 30px; */
+                    
+                    
                 }
             </style>
-
-        </audio>
+                        
+          </audio>
+          <hr>
 
     </div>
 
 
 
-    <style>
-        section#Deporte {
-            margin-top: 40px;
-            /* Baja el texto 50px */
-            background-color: #b0c9d7;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
+          
 
-        section#Deporte h2 {
-            color: #2c3e50;
-            font-size: 40px;
-            margin-bottom: 10px;
-            font-family: 'calibri';
-            padding: 10px;
-            text-align: center;
-            /* Centra solo el texto */
-
-        }
-
-        section#Deporte p {
-            color: #34495e;
-            font-size: 16px;
-            margin-bottom: 20px;
-        }
-
-        .news-table {
-            width: 100%;
-            border-collapse: separate;
-            border-spacing: 0 15px;
-        }
-
-        .news-table th,
-        .news-table td {
-            padding: 15px;
-            text-align: left;
-            vertical-align: top;
-        }
-
-        .news-table th {
-            background-color: #2c3e50;
-            color: white;
-            border-radius: 8px 8px 0 0;
-        }
-
-        .news-table tr {
-            background-color: #f8f9fa;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            display: flex;
-            align-items: center;
-            padding: 15px;
-        }
-
-        .news-table img {
-            width: 400px;
-            height: auto;
-            border-radius: 10px;
-            margin-right: 15px;
-        }
-
-        .news-table a {
-            color: #3498db;
-            text-decoration: none;
-        }
-
-        .news-table a:hover {
-            text-decoration: underline;
-        }
-
-        .news-content {
-            display: flex;
-            flex-direction: column;
-        }
-    </style>
+          <style>
+ 
+            section#Deporte {
+                margin-top:40px; /* Baja el texto 50px */
+                background-color: #d79898;
+                padding: 20px;
+                border-radius: 8px;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            }
+            section#Deporte h2 {
+                color: #734b4b;
+                font-size: 40px;
+                margin-bottom: 10px;
+                font-family: 'calibri';
+                padding: 10px;
+                text-align: center; /* Centra solo el texto */
+              
+            }
+            section#Deporte p {
+                color: #644545;
+                font-size: 16px;
+                margin-bottom: 20px;
+            }
+            .news-table {
+                width: 100%;
+                border-collapse: separate;
+                border-spacing: 0 15px;
+            }
+            .news-table th, .news-table td {
+                padding: 15px;
+                text-align: left;
+                vertical-align: top;
+            }
+            .news-table th {
+                background-color: #6a4d4d;
+                color: white;
+                border-radius: 8px 8px 0 0;
+            }
+            .news-table tr {
+                background-color: #f8f9fa;
+                border-radius: 8px;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                display: flex;
+                align-items: center;
+                padding: 15px;
+            }
+            .news-table img {
+                width: 400px;
+                height: auto;
+                border-radius: 10px;
+                margin-right: 15px;
+            }
+            .news-table a {
+                color: #826767;
+                text-decoration: none;
+            }
+            .news-table a:hover {
+                text-decoration: underline;
+            }
+            .news-content {
+                display: flex;
+                flex-direction: column;
+            }
+        </style>
 
 
 
-    <div class="container">
+        <div class="container">
         <section id="Deporte">
-            <h2>Deportes</h2>
+            <h2 style="color: rgb(39, 39, 39);">Deportes</h2>
             <p>Aquí encontrarás las últimas noticias deportivas...</p>
-            <p id="contador-deporte" class="contador-articulos"></p>
-
             <table class="news-table">
-
+           
                 <tr>
-                    <td><img src="logo5.png" alt="Partido Increíble"></td>
+                    <td><img src="imagenes/logo5.png" alt="Partido Increíble"></td>
                     <td class="news-content">
-                        <strong>Messi y una decisión clave de cara al Mundial 2026</strong>
-                        <span>Lionel Messi ha anunciado que jugará en el Mundial 2026, lo que ha emocionado a sus
-                            seguidores y promete ser un gran espectáculo para los amantes del fútbol. Su participación
-                            es vista como una oportunidad para que Argentina defienda su título y para que Messi
-                            continúe demostrando su talento en el escenario más grande del deporte.</span>
+                        <strong>Messi y una decisión clave de cara al Mundial 2026</strong> 
+                        <span>Lionel Messi ha anunciado que jugará en el Mundial 2026, lo que ha emocionado a sus seguidores y promete ser un gran espectáculo para los amantes del fútbol. Su participación es vista como una oportunidad para que Argentina defienda su título y para que Messi continúe demostrando su talento en el escenario más grande del deporte.</span>
                         <a href="#">Leer más</a>
                     </td>
                 </tr>
                 <tr>
-                    <td><img src="logo6.png" alt="Jugador Estrella"></td>
+                    <td><img src="imagenes/logo6.png" alt="Jugador Estrella"></td>
                     <td class="news-content">
                         <strong>España, campeona de los Juegos Sordolímpicos</strong>
-                        <span>El equipo femenino de fútbol sala de España se coronó campeón en los Juegos Sordolímpicos,
-                            demostrando su habilidad y determinación. Este triunfo es un gran orgullo para el país y
-                            destaca la importancia de la inclusión en el deporte</span>
+                        <span>El equipo femenino de fútbol sala de España se coronó campeón en los Juegos Sordolímpicos, demostrando su habilidad y determinación. Este triunfo es un gran orgullo para el país y destaca la importancia de la inclusión en el deporte</span>
                         <a href="#">Leer más</a>
                     </td>
                 </tr>
                 <tr>
-                    <td><img src="logo7.png" alt="Nueva Contratación"></td>
+                    <td><img src="imagenes/logo7.png" alt="Nueva Contratación"></td>
                     <td class="news-content">
                         <strong>Djokovic hace historia en Masters 1000</strong>
-                        <span>Novak Djokovic ha alcanzado un nuevo récord en los torneos Masters 1000, consolidándose
-                            como uno de los mejores tenistas de todos los tiempos. Su perseverancia y talento continúan
-                            inspirando a jugadores y aficionados alrededor del mundo.</span>
+                        <span>Novak Djokovic ha alcanzado un nuevo récord en los torneos Masters 1000, consolidándose como uno de los mejores tenistas de todos los tiempos. Su perseverancia y talento continúan inspirando a jugadores y aficionados alrededor del mundo.</span>
                         <a href="#">Leer más</a>
                     </td>
                 </tr>
             </table>
         </section>
     </div>
-
+        
 
 
 
     <style>
+ 
         section#Negocio {
 
-            margin-top: 40px;
-            /* Baja el texto 50px */
+            margin-top:40px; /* Baja el texto 50px */
             background-color: #b0c9d7;
             padding: 20px;
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
-
         section#Negocio h2 {
             color: #2c3e50;
             font-size: 40px;
             margin-bottom: 10px;
             font-family: 'calibri';
             padding: 10px;
-            text-align: center;
-            /* Centra solo el texto */
-
+            text-align: center; /* Centra solo el texto */
+       
         }
-
         section#Negocio p {
             color: #34495e;
             font-size: 16px;
             margin-bottom: 20px;
         }
-
         .news-table {
             width: 100%;
             border-collapse: separate;
             border-spacing: 0 15px;
         }
-
-        .news-table th,
-        .news-table td {
+        .news-table th, .news-table td {
             padding: 15px;
             text-align: left;
             vertical-align: top;
         }
-
         .news-table th {
             background-color: #2c3e50;
             color: white;
             border-radius: 8px 8px 0 0;
         }
-
         .news-table tr {
             background-color: #f8f9fa;
             border-radius: 8px;
@@ -412,23 +488,19 @@
             align-items: center;
             padding: 15px;
         }
-
         .news-table img {
             width: 200px;
             height: auto;
             border-radius: 10px;
             margin-right: 15px;
         }
-
         .news-table a {
             color: #3498db;
             text-decoration: none;
         }
-
         .news-table a:hover {
             text-decoration: underline;
         }
-
         .news-content {
             display: flex;
             flex-direction: column;
@@ -439,100 +511,101 @@
 
     <div class="container">
         <section id="Negocio">
-            <h2>Negocios</h2>
+            <h2 style="color: rgb(48, 48, 48);">Negocios</h2>
             <p>Lo más importante y relevante de los negocios a nivel nacional e internacional</p>
-            <p id="contador-negocio" class="contador-articulos"></p>
-
             <table class="news-table">
-
+        
                 <tr>
-                    <td><img src="logo8.png" alt="Partido Increíble"></td>
+                    <td><img src="imagenes/logo8.png" alt="Partido Increíble"></td>
                     <td class="news-content">
                         <strong>Mercados argentinos atentos a detalles del acuerdo con el FMI Reuters</strong>
-                        <span>Los mercados financieros en Argentina operan con cautela mientras esperan información
-                            sobre las negociaciones del gobierno con el FMI para un crédito de 20.000 millones de
-                            dólares. El objetivo es reducir la incertidumbre y fortalecer las reservas del banco
-                            central. ​
+                        <span>Los mercados financieros en Argentina operan con cautela mientras esperan información sobre las negociaciones del gobierno con el FMI para un crédito de 20.000 millones de dólares. El objetivo es reducir la incertidumbre y fortalecer las reservas del banco central. ​
                             Reuters</span>
                         <a href="#">Leer más</a>
                     </td>
                 </tr>
                 <tr>
-                    <td><img src="logo9.png" alt="Jugador Estrella"></td>
+                    <td><img src="imagenes/logo9.png" alt="Jugador Estrella"></td>
                     <td class="news-content">
                         <strong>Epa Colombia: continuidad de negocios tras condena judicial.
-                        </strong>
-                        <span>Daneidy Barrera Rojas, conocida como Epa Colombia, enfrenta una condena de más de 5 años
-                            de prisión por vandalismo. Su pareja, Karol Samantha, asegura que los negocios de Epa
-                            Colombia, incluyendo su marca de keratinas y peluquerías, seguirán operando bajo su gestión
-                            durante su ausencia. </span>
+                            </strong>
+                        <span>Daneidy Barrera Rojas, conocida como Epa Colombia, enfrenta una condena de más de 5 años de prisión por vandalismo. Su pareja, Karol Samantha, asegura que los negocios de Epa Colombia, incluyendo su marca de keratinas y peluquerías, seguirán operando bajo su gestión durante su ausencia. </span>
                         <a href="#">Leer más</a>
                     </td>
                 </tr>
                 <tr>
-                    <td><img src="logo10.png" alt="Nueva Contratación"></td>
+                    <td><img src="imagenes/logo10.png" alt="Nueva Contratación"></td>
                     <td class="news-content">
                         <strong>Unión Europea lanza medidas para apoyar al sector vinícola </strong>
-                        <span>La Unión Europea ha implementado un paquete de medidas destinadas a respaldar al sector
-                            vinícola, considerado una pieza clave del comercio europeo por su contribución al empleo y a
-                            las exportaciones. Estas acciones buscan fortalecer la competitividad y sostenibilidad del
-                            sector. </span>
+                        <span>La Unión Europea ha implementado un paquete de medidas destinadas a respaldar al sector vinícola, considerado una pieza clave del comercio europeo por su contribución al empleo y a las exportaciones. Estas acciones buscan fortalecer la competitividad y sostenibilidad del sector. </span>
                         <a href="#">Leer más</a>
                     </td>
                 </tr>
             </table>
-
+           
         </section>
     </div>
 
 
-
+    <hr>
 
     <div class="container">
         <section id="SobreNosotros">
             <h2>Sobre Nosotros</h2>
-            <p>En El Faro, nos dedicamos a ofrecer noticias precisas y actualizadas sobre eventos nacionales e
-                internacionales. Nuestro equipo de periodistas trabaja incansablemente para proporcionar análisis
-                profundos y reportajes exclusivos. Nos comprometemos a mantener la integridad y la transparencia en cada
-                artículo, asegurando que nuestros lectores estén siempre bien informados. Únete a nuestra comunidad y
-                mantente al día con las noticias que realmente importan.
-            </p>
+            <p>En El Faro, nos dedicamos a ofrecer noticias precisas y actualizadas sobre eventos nacionales e internacionales. Nuestro equipo de periodistas trabaja incansablemente para proporcionar análisis profundos y reportajes exclusivos. Nos comprometemos a mantener la integridad y la transparencia en cada artículo, asegurando que nuestros lectores estén siempre bien informados. Únete a nuestra comunidad y mantente al día con las noticias que realmente importan.
+                </p>
         </section>
+
+  
+
     </div>
 
+    <hr>
 
 
-    <div class="container">
+
+    <!-- <div class="container">
         <section id="Contacto">
             <h2>Contacto</h2>
-            <form id="form-contacto">
-                <input type="text" id="nombreContacto" placeholder="Tu nombre" required><br><br>
-                <textarea id="mensajeContacto" placeholder="Tu mensaje" rows="4" required></textarea><br><br>
-                <button type="submit">Enviar</button>
-            </form>
-            <div id="mensajeEnviado" style="margin-top: 20px;"></div>
+            <p id="Contacto"> Escribenos a contacto@elfaro.cl</p>
         </section>
+    </div> -->
 
-    </div>
+    
+    <section id="Contacto">
+        <h2>Contacto</h2>
+        <form id="form-contacto">
+            <input type="text" id="nombreContacto" placeholder="Tu nombre" required><br><br>
+            <textarea id="mensajeContacto" placeholder="Tu mensaje" rows="4" required></textarea><br><br>
+            <button type="submit">Enviar</button>
+        </form>
+        <div id="mensajeEnviado" style="margin-top: 20px;"></div>
+    </section>
 
 
 
 
 
+
+    <!-- <footer>
+        &copy; 2025 Diario El Faro - Todos los derechos reservados.
+    </footer> -->
 
     <footer>
         &copy; 2025 Diario El Faro - Todos los derechos reservados.
+        <br>
+        <address>
+            <strong>Diario El Faro</strong><br>
+            Calle Ficticia 123, Ciudad Imaginaria, País Inventado<br>
+            Teléfono: +123 456 7890<br>
+            Email: contacto@diarioelfaro.com
+        </address>
+ 
     </footer>
+    
 
-    <script src="js/reloj.js"></script>
-    <script src="js/articulos.js"></script>
-    <script src="js/contacto.js"></script>
-    <script src="js/contador.js"></script>
-
-
-
-
+    <script src="script.js"></script>
+  
 
 </body>
-
 </html>

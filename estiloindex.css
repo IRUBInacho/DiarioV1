@@ -1,17 +1,32 @@
-h1 {
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
 
-    background: #1f6291;
-    font-family: 'calibri';
-    padding: 10px;
-    text-align: center; /* Centra solo el texto */
+h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    text-align: center;
     color: rgb(255, 255, 255);
-    font-size: 30px;
-  }
+    padding: 20px 30px;
+    margin: 100px auto;
+    border-radius: 10px;
+    width: fit-content;
+    max-width: 50%;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+   
+}
+
+
+.container {
+    width: 100%;
+    }
+
 
 p {
     text-align: center;
     font-size: 18px;
-    color: #555;
+    color: #000000;
+    font-family: 'Poppins', sans-serif;
+    padding: 20px;
+    /* padding-right: 800px; */
 }
 
 #Inicio {
@@ -38,7 +53,8 @@ p {
 #Inicio .news-table {
     width: 100%;
     border-collapse: separate;
-    border-spacing: 10px;
+    border-spacing: 20px;
+    
 }
 
 #Inicio .news-table tr {
@@ -47,6 +63,7 @@ p {
     align-items: center;
     justify-content: center;
     width: 100%;
+    padding: 40px;
 }
 
 #Inicio .news-table td {
@@ -57,6 +74,7 @@ p {
     vertical-align: middle;
     width: 100%;
     text-align: center;
+    
 }
 
 #Inicio .news-table td:first-child {
@@ -98,7 +116,7 @@ p {
 
 
 .video-container h3 {
-    margin-left: 405px;
+    /* margin-left: 405px; */
     margin-right: 0;
     font-size: 22px;
     background-color: #c8e7ff;
@@ -108,7 +126,7 @@ p {
 
 
 .audio-container h4 {
-    margin-left: 405px;
+    /* margin-left: 405px; */
     margin-right: 0;
     font-size: 22px;
     background-color: #c8e7ff;
@@ -118,3 +136,270 @@ p {
     
 }
 
+:root {
+    --primary: #1e90ff;
+    --secondary: #f5f6fa;
+    --text-dark: #2f3640;
+    --text-light: #718093;
+}
+
+.card {
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.05);
+    padding: 20px;
+    transition: transform 0.2s ease;
+}
+.card:hover {
+    transform: translateY(-5px);
+}
+
+
+
+* {
+    transition: all 0.3s ease-in-out;
+}
+
+
+
+    .publicidad-item {
+     background-color: #f0f0f0;
+     padding: 10px;
+     margin-bottom: 20px;
+     border: 1px solid #ccc;
+    }
+    
+    .publicidad-row {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+    }
+    
+    .publicidad-cell {
+     flex: 1;
+     padding: 10px;
+    }
+    
+    .publicidad-cell img {
+     max-width: 100px;
+     height: auto;
+    }
+    
+    .container {
+        width: 100%;
+        padding: 20px;
+    }
+    
+    #ArticulosRecientes {
+        margin-top: 20px;
+    }
+    
+    #ArticulosRecientes h2 {
+        text-align: center;
+        margin-bottom: 20px;
+        font-size: 24px; /* Ajusta el tamaño del título */
+    }
+    
+    .articulo-destacado {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border: 1px solid #ddd;
+        padding: 20px;
+        margin: 10px;
+        background-color: #f9f9f9;
+        width: 30%; /* Ajusta el ancho de cada artículo */
+    }
+    
+    .articulo-destacado img {
+        max-width: 100%;
+        height: auto;
+        margin-bottom: 10px;
+    }
+    
+    .articulo-destacado h3 {
+        margin: 10px 0;  
+        padding-left: 50px;
+        font-size: 11px;
+    }
+    
+    .articulo-destacado p {
+        text-align: center;
+        margin-bottom: 10px;
+        /* padding-left: 800px; */
+        font-size: 11px;
+    }
+    
+    .articulo-destacado a {
+        color: #fafafa;
+        text-decoration: none;
+        font-weight: bold;
+    }
+    
+    #ArticulosRecientes .articulos-container {
+        display: flex;
+        justify-content: space-around; /* Distribuye los artículos horizontalmente */
+        flex-wrap: wrap; /* Permite que los artículos se ajusten en varias filas si es necesario */
+    }
+    
+    .header-top {
+        display: flex;
+        justify-content: center; /* Centra el contenido horizontalmente */
+        align-items: center; /* Centra el contenido verticalmente */
+        padding: 10px 10px;
+        width: 100%; /* Asegura que el contenedor ocupe todo el ancho disponible */
+        height: 100px; /* Ajusta la altura según sea necesario */
+    }
+    
+    .reloj-container p {
+        margin: 0;
+        color: white;
+        text-align: center; /* Centra el texto */
+        font-size: 15px; /* Ajusta el tamaño de la fuente */
+        padding-right: 100px;
+     
+    }
+    
+
+    /* Bootstrap CSS */
+@import url('https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css');
+
+.container {
+    margin-top: 20px;
+}
+
+#AgregarArticulo h2 {
+    margin-bottom: 20px;
+}
+
+#form-articulo input,
+#form-articulo textarea {
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#form-articulo button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#form-articulo button:hover {
+    background-color: #0056b3;
+}
+
+#articulos-generados {
+    margin-top: 30px;
+}
+
+#articulos-generados h3 {
+    margin-bottom: 15px;
+}
+
+#lista-articulos {
+    list-style-type: none;
+    padding: 0;
+}
+
+#lista-articulos li {
+    background-color: #f8f9fa;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+/* Bootstrap CSS */
+@import url('https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css');
+
+/* Estilos personalizados */
+.container-fluid {
+    background-color: #f5dbdb; /* Cambia el color de fondo */
+    max-width: 100%; /* Ajusta el ancho máximo del contenedor */
+     min-height: 10vh; /* Ajusta la altura mínima al 100% de la altura de la ventana */
+     padding-top: 30px; /* Ajusta el padding superior */
+     padding-bottom: 30px; /* Ajusta el padding inferior */
+    
+  
+}
+
+
+.nav-link:hover, .navbar-brand:hover {
+    color: #242322 !important; /* Cambia el color del texto al pasar el mouse */
+}
+
+.btn-outline-success {
+    color: #000000 !important; /* Cambia el color del texto del botón */
+    border-color: #947474 !important; /* Cambia el color del borde del botón */
+}
+
+.btn-outline-success:hover {
+    background-color: #ffc107 !important; /* Cambia el color de fondo del botón al pasar el mouse */
+    border-color: #ffc107 !important; /* Cambia el color del borde del botón al pasar el mouse */
+}
+
+
+
+
+#Contacto h2 {
+
+            
+    text-align: center; /* Asegura que el texto dentro del párrafo esté centrado */
+}
+
+
+#Contacto p {
+        
+         text-align: center; /* Asegura que el texto dentro del párrafo esté centrado */
+         padding-right: 0px;
+    
+        }
+        
+
+#SobreNosotros  {
+    text-align: center; /* Centra el texto horizontalmente */
+
+   }
+
+
+   #SobreNosotros p {
+    text-align: center; /* Centra el texto horizontalmente */
+    padding-right: 0px;
+
+   }
+
+
+   #Contacto {
+    background-color: #f1f1f1;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 40px;
+}
+
+#Contacto form input,
+#Contacto form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    font-family: Arial;
+}
+
+#Contacto button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#Contacto button:hover {
+    background-color: #218838;
+}
