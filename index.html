@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Diario Digital</title>
-    <link rel="stylesheet" href="estiloindex.css">
+    <link rel="stylesheet" href="css/estiloindex.css">
+
 
     <style>
         body {
@@ -12,6 +14,7 @@
             margin: 0;
             padding: 0;
         }
+
         header {
             background-color: #2c3e50;
             color: white;
@@ -20,37 +23,44 @@
             font-size: 24px;
             font-weight: bold;
         }
+
         nav {
             display: flex;
             justify-content: center;
             background-color: #34495e;
             padding: 10px;
         }
+
         nav a {
             color: white;
             text-decoration: none;
             padding: 10px 20px;
         }
+
         .container {
             width: 80%;
             margin: auto;
             padding: 20px;
         }
+
         .news {
             display: flex;
             flex-wrap: wrap;
             gap: 20px;
         }
+
         .news-item {
             background-color: #ecf0f1;
             padding: 15px;
             width: calc(33% - 20px);
             border-radius: 8px;
         }
+
         .news-item img {
             width: 100%;
             border-radius: 5px;
         }
+
         footer {
             background-color: #2c3e50;
             color: white;
@@ -64,10 +74,18 @@
 <body>
     <a href="https://www.elfaro333.com">Visita nuestro sitio web</a>
     <header>
-        El Faro
-        <img src="logo11.png" alt="">
-
+        <div class="header-top">
+            <div class="titulo-logo">
+                <span class="titulo">El Faro</span>
+                <img src="logo11.png" alt="">
+            </div>
+            <div class="reloj-container">
+                <h1 id="hora">00:00:00</h1>
+                <p id="fecha">dd de mes de yyyy</p>
+            </div>
+        </div>
     </header>
+
 
 
     <style>
@@ -79,12 +97,8 @@
 
         img {
             width: 80px;
-         
-        } 
 
-
-  
-
+        }
     </style>
 
     <nav>
@@ -96,40 +110,73 @@
     </nav>
 
 
-    
+
     <div class="container">
-    <section id="Inicio">
-        <h1>INICIO</h1>
-        <p>ULTIMAS NOTICIAS</p>
-        <table class="news-table" border="0" cellspacing="10" cellpadding="10">
- 
-            <tr>
-        
-                <td><img src="logo2.png" alt=""></td>
-                <td>Categoria:Nacional</td>
-                <td>Cortes de luz en la región Metropolitana: Más de 88 mil clientes están sin suministro</td>
-                <td>Este domingo se registra en la capital del país un sistema frontal con isoterma cero alta por la que se espera la caída de hasta 30 milímetros de agua en zonas precordilleranas y cordilleranas.</td>
-                <td><a href="#">Leer más</a></td>
-            </tr>
-            <tr>
-            
-                <td><img src="logo3.png" alt=""></td>
-                <td>Categoria: Emergencia</td>
-                <td>SHOA descarta tsunami en Chile tras temblor 7,0 en Tonga</td>
-                <td>El Servicio Nacional de Prevención y Respuesta ante Desastres (Senapred) descartó la ocurrencia de un tsunami en las costas chilenas tras el temblor que afectó a Tonga este domingo.</td>
-                <td><a href="#">Leer más</a></td>
-            </tr>
-            <tr>
-               
-                <td><img src="logo4.png" alt=""></td>
-                <td>Categoria: Futbol</td>
-                <td>De los mejores pagados del plantel: el millonario sueldo que gana Felipe Loyola en Independiente</td>
-                <td>El seleccionado chileno la está rompiendo en el fútbol argentino, siendo una de las principales figuras del torneo. Felipe Loyola anotó un doblete este fin de semana.</td>
-                <td><a href="#">Leer más</a></td>
-            </tr>
-        </table>
+        <section id="Inicio">
+            <h1>INICIO</h1>
+            <p>ULTIMAS NOTICIAS</p>
+            <p id="contador-inicio" class="contador-articulos"></p>
+
+            <table class="news-table" border="0" cellspacing="10" cellpadding="10">
+
+                <tr>
+
+                    <td><img src="logo2.png" alt=""></td>
+                    <td>Categoria:Nacional</td>
+                    <td>Cortes de luz en la región Metropolitana: Más de 88 mil clientes están sin suministro</td>
+                    <td>Este domingo se registra en la capital del país un sistema frontal con isoterma cero alta por la
+                        que se espera la caída de hasta 30 milímetros de agua en zonas precordilleranas y cordilleranas.
+                    </td>
+                    <td><a href="#">Leer más</a></td>
+                </tr>
+                <tr>
+
+                    <td><img src="logo3.png" alt=""></td>
+                    <td>Categoria: Emergencia</td>
+                    <td>SHOA descarta tsunami en Chile tras temblor 7,0 en Tonga</td>
+                    <td>El Servicio Nacional de Prevención y Respuesta ante Desastres (Senapred) descartó la ocurrencia
+                        de un tsunami en las costas chilenas tras el temblor que afectó a Tonga este domingo.</td>
+                    <td><a href="#">Leer más</a></td>
+                </tr>
+                <tr>
+
+                    <td><img src="logo4.png" alt=""></td>
+                    <td>Categoria: Futbol</td>
+                    <td>De los mejores pagados del plantel: el millonario sueldo que gana Felipe Loyola en Independiente
+                    </td>
+                    <td>El seleccionado chileno la está rompiendo en el fútbol argentino, siendo una de las principales
+                        figuras del torneo. Felipe Loyola anotó un doblete este fin de semana.</td>
+                    <td><a href="#">Leer más</a></td>
+                </tr>
+            </table>
     </div>
-    
+
+    <div class="container">
+        <section id="AgregarArticulo">
+            <h2>Agregar Nuevo Artículo</h2>
+            <form id="form-articulo">
+                <input type="text" id="titulo" placeholder="Título del artículo" required><br><br>
+                <textarea id="descripcion" placeholder="Descripción del artículo" rows="4" required></textarea><br><br>
+
+                <label for="seccion">Selecciona la sección:</label><br>
+                <select id="seccion" required>
+                    <option value="Inicio">Inicio</option>
+                    <option value="Deporte">Deporte</option>
+                    <option value="Negocio">Negocio</option>
+                </select><br><br>
+
+                <button type="submit">Agregar Artículo</button>
+            </form>
+
+            <div id="articulos-generados">
+                <h3>Artículos agregados:</h3>
+                <ul id="lista-articulos"></ul>
+            </div>
+        </section>
+
+    </div>
+
+
 
 
     <div class="video-container">
@@ -138,196 +185,99 @@
 
             <source src="video1.mp4" type="video/mp4">
             Tu navegador no soporta la etiqueta de video.
-        
-            <style> 
 
+            <style>
                 video {
-                    margin-top: 40px; /* Baja el texto 50px */
+                    margin-top: 40px;
+                    /* Baja el texto 50px */
                     width: 640px;
                     height: 360px;
                     border-radius: 15px;
                     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
                     transition: transform 0.3s ease;
                     margin-left: 400px;
-                
+
 
                 }
 
                 video:hover {
                     transform: scale(1.05);
                 }
-              
             </style>
-          </video>
+        </video>
 
     </div>
 
 
 
-    <div class="audio-container" > 
+    <div class="audio-container">
         <h4> ACTUALIDAD POLITICA: BORIC Y LA REFORMA DE PENSIONES - audio </h4>
-          <audio controls>
+        <audio controls>
             <source src="audio1.mp3" type="audio/mpeg">
             Tu navegador no soporta la etiqueta de audio.
             <style>
                 audio {
                     position: relative;
-                    top: 0px; /* Ajusta este valor según sea necesario */
+                    top: 0px;
+                    /* Ajusta este valor según sea necesario */
                     margin-left: 400px;
                     padding: 5px;
-                    
+
                 }
             </style>
-                        
-          </audio>
+
+        </audio>
 
     </div>
-
-          
-
-          <style>
- 
-            section#Deporte {
-                margin-top:40px; /* Baja el texto 50px */
-                background-color: #b0c9d7;
-                padding: 20px;
-                border-radius: 8px;
-                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            }
-            section#Deporte h2 {
-                color: #2c3e50;
-                font-size: 40px;
-                margin-bottom: 10px;
-                font-family: 'calibri';
-                padding: 10px;
-                text-align: center; /* Centra solo el texto */
-              
-            }
-            section#Deporte p {
-                color: #34495e;
-                font-size: 16px;
-                margin-bottom: 20px;
-            }
-            .news-table {
-                width: 100%;
-                border-collapse: separate;
-                border-spacing: 0 15px;
-            }
-            .news-table th, .news-table td {
-                padding: 15px;
-                text-align: left;
-                vertical-align: top;
-            }
-            .news-table th {
-                background-color: #2c3e50;
-                color: white;
-                border-radius: 8px 8px 0 0;
-            }
-            .news-table tr {
-                background-color: #f8f9fa;
-                border-radius: 8px;
-                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-                display: flex;
-                align-items: center;
-                padding: 15px;
-            }
-            .news-table img {
-                width: 400px;
-                height: auto;
-                border-radius: 10px;
-                margin-right: 15px;
-            }
-            .news-table a {
-                color: #3498db;
-                text-decoration: none;
-            }
-            .news-table a:hover {
-                text-decoration: underline;
-            }
-            .news-content {
-                display: flex;
-                flex-direction: column;
-            }
-        </style>
-
-
-
-        <div class="container">
-        <section id="Deporte">
-            <h2>Deportes</h2>
-            <p>Aquí encontrarás las últimas noticias deportivas...</p>
-            <table class="news-table">
-           
-                <tr>
-                    <td><img src="logo5.png" alt="Partido Increíble"></td>
-                    <td class="news-content">
-                        <strong>Messi y una decisión clave de cara al Mundial 2026</strong> 
-                        <span>Lionel Messi ha anunciado que jugará en el Mundial 2026, lo que ha emocionado a sus seguidores y promete ser un gran espectáculo para los amantes del fútbol. Su participación es vista como una oportunidad para que Argentina defienda su título y para que Messi continúe demostrando su talento en el escenario más grande del deporte.</span>
-                        <a href="#">Leer más</a>
-                    </td>
-                </tr>
-                <tr>
-                    <td><img src="logo6.png" alt="Jugador Estrella"></td>
-                    <td class="news-content">
-                        <strong>España, campeona de los Juegos Sordolímpicos</strong>
-                        <span>El equipo femenino de fútbol sala de España se coronó campeón en los Juegos Sordolímpicos, demostrando su habilidad y determinación. Este triunfo es un gran orgullo para el país y destaca la importancia de la inclusión en el deporte</span>
-                        <a href="#">Leer más</a>
-                    </td>
-                </tr>
-                <tr>
-                    <td><img src="logo7.png" alt="Nueva Contratación"></td>
-                    <td class="news-content">
-                        <strong>Djokovic hace historia en Masters 1000</strong>
-                        <span>Novak Djokovic ha alcanzado un nuevo récord en los torneos Masters 1000, consolidándose como uno de los mejores tenistas de todos los tiempos. Su perseverancia y talento continúan inspirando a jugadores y aficionados alrededor del mundo.</span>
-                        <a href="#">Leer más</a>
-                    </td>
-                </tr>
-            </table>
-        </section>
-    </div>
-        
 
 
 
     <style>
- 
-        section#Negocio {
-
-            margin-top:40px; /* Baja el texto 50px */
+        section#Deporte {
+            margin-top: 40px;
+            /* Baja el texto 50px */
             background-color: #b0c9d7;
             padding: 20px;
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
-        section#Negocio h2 {
+
+        section#Deporte h2 {
             color: #2c3e50;
             font-size: 40px;
             margin-bottom: 10px;
             font-family: 'calibri';
             padding: 10px;
-            text-align: center; /* Centra solo el texto */
-       
+            text-align: center;
+            /* Centra solo el texto */
+
         }
-        section#Negocio p {
+
+        section#Deporte p {
             color: #34495e;
             font-size: 16px;
             margin-bottom: 20px;
         }
+
         .news-table {
             width: 100%;
             border-collapse: separate;
             border-spacing: 0 15px;
         }
-        .news-table th, .news-table td {
+
+        .news-table th,
+        .news-table td {
             padding: 15px;
             text-align: left;
             vertical-align: top;
         }
+
         .news-table th {
             background-color: #2c3e50;
             color: white;
             border-radius: 8px 8px 0 0;
         }
+
         .news-table tr {
             background-color: #f8f9fa;
             border-radius: 8px;
@@ -336,19 +286,149 @@
             align-items: center;
             padding: 15px;
         }
+
+        .news-table img {
+            width: 400px;
+            height: auto;
+            border-radius: 10px;
+            margin-right: 15px;
+        }
+
+        .news-table a {
+            color: #3498db;
+            text-decoration: none;
+        }
+
+        .news-table a:hover {
+            text-decoration: underline;
+        }
+
+        .news-content {
+            display: flex;
+            flex-direction: column;
+        }
+    </style>
+
+
+
+    <div class="container">
+        <section id="Deporte">
+            <h2>Deportes</h2>
+            <p>Aquí encontrarás las últimas noticias deportivas...</p>
+            <p id="contador-deporte" class="contador-articulos"></p>
+
+            <table class="news-table">
+
+                <tr>
+                    <td><img src="logo5.png" alt="Partido Increíble"></td>
+                    <td class="news-content">
+                        <strong>Messi y una decisión clave de cara al Mundial 2026</strong>
+                        <span>Lionel Messi ha anunciado que jugará en el Mundial 2026, lo que ha emocionado a sus
+                            seguidores y promete ser un gran espectáculo para los amantes del fútbol. Su participación
+                            es vista como una oportunidad para que Argentina defienda su título y para que Messi
+                            continúe demostrando su talento en el escenario más grande del deporte.</span>
+                        <a href="#">Leer más</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td><img src="logo6.png" alt="Jugador Estrella"></td>
+                    <td class="news-content">
+                        <strong>España, campeona de los Juegos Sordolímpicos</strong>
+                        <span>El equipo femenino de fútbol sala de España se coronó campeón en los Juegos Sordolímpicos,
+                            demostrando su habilidad y determinación. Este triunfo es un gran orgullo para el país y
+                            destaca la importancia de la inclusión en el deporte</span>
+                        <a href="#">Leer más</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td><img src="logo7.png" alt="Nueva Contratación"></td>
+                    <td class="news-content">
+                        <strong>Djokovic hace historia en Masters 1000</strong>
+                        <span>Novak Djokovic ha alcanzado un nuevo récord en los torneos Masters 1000, consolidándose
+                            como uno de los mejores tenistas de todos los tiempos. Su perseverancia y talento continúan
+                            inspirando a jugadores y aficionados alrededor del mundo.</span>
+                        <a href="#">Leer más</a>
+                    </td>
+                </tr>
+            </table>
+        </section>
+    </div>
+
+
+
+
+    <style>
+        section#Negocio {
+
+            margin-top: 40px;
+            /* Baja el texto 50px */
+            background-color: #b0c9d7;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        section#Negocio h2 {
+            color: #2c3e50;
+            font-size: 40px;
+            margin-bottom: 10px;
+            font-family: 'calibri';
+            padding: 10px;
+            text-align: center;
+            /* Centra solo el texto */
+
+        }
+
+        section#Negocio p {
+            color: #34495e;
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+
+        .news-table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0 15px;
+        }
+
+        .news-table th,
+        .news-table td {
+            padding: 15px;
+            text-align: left;
+            vertical-align: top;
+        }
+
+        .news-table th {
+            background-color: #2c3e50;
+            color: white;
+            border-radius: 8px 8px 0 0;
+        }
+
+        .news-table tr {
+            background-color: #f8f9fa;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: center;
+            padding: 15px;
+        }
+
         .news-table img {
             width: 200px;
             height: auto;
             border-radius: 10px;
             margin-right: 15px;
         }
+
         .news-table a {
             color: #3498db;
             text-decoration: none;
         }
+
         .news-table a:hover {
             text-decoration: underline;
         }
+
         .news-content {
             display: flex;
             flex-direction: column;
@@ -361,13 +441,18 @@
         <section id="Negocio">
             <h2>Negocios</h2>
             <p>Lo más importante y relevante de los negocios a nivel nacional e internacional</p>
+            <p id="contador-negocio" class="contador-articulos"></p>
+
             <table class="news-table">
-        
+
                 <tr>
                     <td><img src="logo8.png" alt="Partido Increíble"></td>
                     <td class="news-content">
                         <strong>Mercados argentinos atentos a detalles del acuerdo con el FMI Reuters</strong>
-                        <span>Los mercados financieros en Argentina operan con cautela mientras esperan información sobre las negociaciones del gobierno con el FMI para un crédito de 20.000 millones de dólares. El objetivo es reducir la incertidumbre y fortalecer las reservas del banco central. ​
+                        <span>Los mercados financieros en Argentina operan con cautela mientras esperan información
+                            sobre las negociaciones del gobierno con el FMI para un crédito de 20.000 millones de
+                            dólares. El objetivo es reducir la incertidumbre y fortalecer las reservas del banco
+                            central. ​
                             Reuters</span>
                         <a href="#">Leer más</a>
                     </td>
@@ -376,8 +461,11 @@
                     <td><img src="logo9.png" alt="Jugador Estrella"></td>
                     <td class="news-content">
                         <strong>Epa Colombia: continuidad de negocios tras condena judicial.
-                            </strong>
-                        <span>Daneidy Barrera Rojas, conocida como Epa Colombia, enfrenta una condena de más de 5 años de prisión por vandalismo. Su pareja, Karol Samantha, asegura que los negocios de Epa Colombia, incluyendo su marca de keratinas y peluquerías, seguirán operando bajo su gestión durante su ausencia. </span>
+                        </strong>
+                        <span>Daneidy Barrera Rojas, conocida como Epa Colombia, enfrenta una condena de más de 5 años
+                            de prisión por vandalismo. Su pareja, Karol Samantha, asegura que los negocios de Epa
+                            Colombia, incluyendo su marca de keratinas y peluquerías, seguirán operando bajo su gestión
+                            durante su ausencia. </span>
                         <a href="#">Leer más</a>
                     </td>
                 </tr>
@@ -385,12 +473,15 @@
                     <td><img src="logo10.png" alt="Nueva Contratación"></td>
                     <td class="news-content">
                         <strong>Unión Europea lanza medidas para apoyar al sector vinícola </strong>
-                        <span>La Unión Europea ha implementado un paquete de medidas destinadas a respaldar al sector vinícola, considerado una pieza clave del comercio europeo por su contribución al empleo y a las exportaciones. Estas acciones buscan fortalecer la competitividad y sostenibilidad del sector. </span>
+                        <span>La Unión Europea ha implementado un paquete de medidas destinadas a respaldar al sector
+                            vinícola, considerado una pieza clave del comercio europeo por su contribución al empleo y a
+                            las exportaciones. Estas acciones buscan fortalecer la competitividad y sostenibilidad del
+                            sector. </span>
                         <a href="#">Leer más</a>
                     </td>
                 </tr>
             </table>
-           
+
         </section>
     </div>
 
@@ -400,8 +491,12 @@
     <div class="container">
         <section id="SobreNosotros">
             <h2>Sobre Nosotros</h2>
-            <p>En El Faro, nos dedicamos a ofrecer noticias precisas y actualizadas sobre eventos nacionales e internacionales. Nuestro equipo de periodistas trabaja incansablemente para proporcionar análisis profundos y reportajes exclusivos. Nos comprometemos a mantener la integridad y la transparencia en cada artículo, asegurando que nuestros lectores estén siempre bien informados. Únete a nuestra comunidad y mantente al día con las noticias que realmente importan.
-                </p>
+            <p>En El Faro, nos dedicamos a ofrecer noticias precisas y actualizadas sobre eventos nacionales e
+                internacionales. Nuestro equipo de periodistas trabaja incansablemente para proporcionar análisis
+                profundos y reportajes exclusivos. Nos comprometemos a mantener la integridad y la transparencia en cada
+                artículo, asegurando que nuestros lectores estén siempre bien informados. Únete a nuestra comunidad y
+                mantente al día con las noticias que realmente importan.
+            </p>
         </section>
     </div>
 
@@ -410,8 +505,14 @@
     <div class="container">
         <section id="Contacto">
             <h2>Contacto</h2>
-            <p>Escribenos a contacto@elfaro.cl</p>
+            <form id="form-contacto">
+                <input type="text" id="nombreContacto" placeholder="Tu nombre" required><br><br>
+                <textarea id="mensajeContacto" placeholder="Tu mensaje" rows="4" required></textarea><br><br>
+                <button type="submit">Enviar</button>
+            </form>
+            <div id="mensajeEnviado" style="margin-top: 20px;"></div>
         </section>
+
     </div>
 
 
@@ -422,5 +523,16 @@
     <footer>
         &copy; 2025 Diario El Faro - Todos los derechos reservados.
     </footer>
+
+    <script src="js/reloj.js"></script>
+    <script src="js/articulos.js"></script>
+    <script src="js/contacto.js"></script>
+    <script src="js/contador.js"></script>
+
+
+
+
+
 </body>
+
 </html>
